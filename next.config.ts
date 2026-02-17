@@ -2,6 +2,13 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
+  output: "export",
+  distDir: "build",
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },  
+  reactStrictMode: true,
 };
 
 export default nextConfig;
