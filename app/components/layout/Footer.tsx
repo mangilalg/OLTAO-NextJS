@@ -41,7 +41,6 @@ export default function Footer() {
 
   return (
     <footer className="bg-black text-white">
-      {/* Main Footer Content */}
       <motion.div
         className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-10"
         initial="hidden"
@@ -50,7 +49,6 @@ export default function Footer() {
         variants={containerVariants}
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
-          {/* Newsletter Section */}
           <motion.div
             variants={itemVariants}
             className="w-full lg:col-span-1 ll"
@@ -92,221 +90,114 @@ export default function Footer() {
             </form>
           </motion.div>
 
-          {/* Quick Links */}
           <motion.div variants={itemVariants}>
             <h3 className="text-lg font-medium mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/accessories"
-                  className="text-sm text-gray-300 hover:text-white transition-colors"
-                >
-                  Accessories
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about-warranty"
-                  className="text-sm text-gray-300 hover:text-white transition-colors"
-                >
-                  About Warranty
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/why-oltao"
-                  className="text-sm text-gray-300 hover:text-white transition-colors"
-                >
-                  Why Oltao
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-sm text-gray-300 hover:text-white transition-colors"
-                >
-                  Contact Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/remote-manual"
-                  className="text-sm text-gray-300 hover:text-white transition-colors"
-                >
-                  Remote Manual
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about"
-                  className="text-sm text-gray-300 hover:text-white transition-colors"
-                >
-                  About Us
-                </Link>
-              </li>
+              {[
+                { label: "Accessories", href: "/accessories" },
+                { label: "About Warranty", href: "/about-warranty" },
+                { label: "Why Oltao", href: "/why-oltao" },
+                { label: "Contact Us", href: "/contact" },
+                { label: "Remote Manual", href: "/remote-manual" },
+                { label: "About Us", href: "/about" },
+              ].map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-gray-400 hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </motion.div>
 
-          {/* Legal */}
           <motion.div variants={itemVariants}>
             <h3 className="text-lg font-medium mb-4">Legal</h3>
             <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/terms"
-                  className="text-sm text-gray-300 hover:text-white transition-colors"
-                >
-                  Terms & Conditions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/privacy"
-                  className="text-sm text-gray-300 hover:text-white transition-colors"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/replacement-policy"
-                  className="text-sm text-gray-300 hover:text-white transition-colors"
-                >
-                  Replacement Policy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/shipping"
-                  className="text-sm text-gray-300 hover:text-white transition-colors"
-                >
-                  Shipping Policy
-                </Link>
-              </li>
+              {[
+                { label: "Terms & Conditions", href: "/terms" },
+                { label: "Privacy Policy", href: "/privacy" },
+                { label: "Replacement Policy", href: "/replacement-policy" },
+                { label: "Shipping Policy", href: "/shipping" },
+              ].map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-gray-400 hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </motion.div>
 
-          {/* Collections */}
           <motion.div variants={itemVariants}>
             <h3 className="text-lg font-medium mb-4">Collections</h3>
             <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/chandelier-fans"
-                  className="text-sm text-gray-300 hover:text-white transition-colors"
-                >
-                  Chandelier Fans
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/luxury-fans"
-                  className="text-sm text-gray-300 hover:text-white transition-colors"
-                >
-                  Luxury Fans
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/designer-wall-fans"
-                  className="text-sm text-gray-300 hover:text-white transition-colors"
-                >
-                  Designer Wall Fans
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/hugger-fans"
-                  className="text-sm text-gray-300 hover:text-white transition-colors"
-                >
-                  Hugger Fans
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/designer-ceiling-fans"
-                  className="text-sm text-gray-300 hover:text-white transition-colors"
-                >
-                  Designer Ceiling Fans
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/bladeless-fan"
-                  className="text-sm text-gray-300 hover:text-white transition-colors"
-                >
-                  Bladeless Fan
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/natural-wooden-blade-fan"
-                  className="text-sm text-gray-300 hover:text-white transition-colors"
-                >
-                  Natural Wooden Blade Fan
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/outdoor-ceiling-fans"
-                  className="text-sm text-gray-300 hover:text-white transition-colors"
-                >
-                  Outdoor Ceiling Fans
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/straight-blade-chandelier-fan"
-                  className="text-sm text-gray-300 hover:text-white transition-colors"
-                >
-                  Straight Blade Chandelier Fan
-                </Link>
-              </li>
+              {[
+                { label: "Chandelier Fans", href: "/chandelier-fans" },
+                { label: "Luxury Fans", href: "/luxury-fans" },
+                { label: "Designer Wall Fans", href: "/designer-wall-fans" },
+                { label: "Hugger Fans", href: "/hugger-fans" },
+                {
+                  label: "Designer Ceiling Fans",
+                  href: "/designer-ceiling-fans",
+                },
+                { label: "Bladeless Fan", href: "/bladeless-fan" },
+                {
+                  label: "Natural Wooden Blade Fan",
+                  href: "/natural-wooden-blade-fan",
+                },
+                {
+                  label: "Outdoor Ceiling Fans",
+                  href: "/outdoor-ceiling-fans",
+                },
+                {
+                  label: "Straight Blade Chandelier Fan",
+                  href: "/straight-blade-chandelier-fan",
+                },
+              ].map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-gray-400 hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </motion.div>
 
-          {/* Accessories */}
           <motion.div variants={itemVariants}>
             <h3 className="text-lg font-medium mb-4">Accessories</h3>
             <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/crystal"
-                  className="text-sm text-gray-300 hover:text-white transition-colors"
-                >
-                  Crystal
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/canopy"
-                  className="text-sm text-gray-300 hover:text-white transition-colors"
-                >
-                  Canopy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/remote-controller-kit"
-                  className="text-sm text-gray-300 hover:text-white transition-colors"
-                >
-                  Remote Controller Kit
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/downrods"
-                  className="text-sm text-gray-300 hover:text-white transition-colors"
-                >
-                  Downrods
-                </Link>
-              </li>
+              {[
+                { label: "Crystal", href: "/crystal" },
+                { label: "Canopy", href: "/canopy" },
+                {
+                  label: "Remote Controller Kit",
+                  href: "/remote-controller-kit",
+                },
+                { label: "Downrods", href: "/downrods" },
+              ].map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-gray-400 hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </motion.div>
         </div>
       </motion.div>
 
-      {/* Scrolling Text Banner */}
       <div className="border-t border-cream/10 ll py-6 overflow-hidden flex justify-center items-center  flex-col md:flex-row ">
         <div className="flex min-w-[75%] whitespace-nowrap animate-scroll ">
           <span className="text-2xl lg:text-3xl font-light tracking-wider mx-3">
@@ -326,7 +217,6 @@ export default function Footer() {
           </span>
         </div>
 
-        {/* Social Icons */}
         <div className="max-w-[25%] md:px-4 sm:px-6 lg:px-8 bg-black z-50 mt-2 md:mt-0">
           <div className="flex justify-center md:justify-end gap-3">
             <Link
@@ -363,7 +253,7 @@ export default function Footer() {
                 variants={socialIconVariants}
                 whileHover="hover"
                 whileTap="tap"
-                className="p-0.5 w-6 h-6 md:w-10 md:h-10 bg-gradient-to-tr from-[#833AB4] via-[#FD1D1D] to-[#F77737] text-white flex items-center justify-center hover:opacity-90 transition-opacity"
+                className="p-0.5 w-6 h-6 md:w-10 md:h-10 bg-linear-to-tr from-[#833AB4] via-[#FD1D1D] to-[#F77737] text-white flex items-center justify-center hover:opacity-90 transition-opacity"
               >
                 <svg
                   width="20"
@@ -448,10 +338,8 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Section */}
       <div className="border-t border-cream/10">
         <div className="max-400px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          {/* Logo */}
           <div className="flex justify-center mb-6">
             <div className="text-center">
               <Image
@@ -464,7 +352,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Language and Currency */}
           <div className="flex items-center justify-start gap-4 mb-4 text-sm pb-3-5">
             <button className="flex items-center gap-2 hover:text-gray-300 transition-colors">
               <select
@@ -516,7 +403,6 @@ export default function Footer() {
             </button>
           </div>
 
-          {/* Copyright */}
           <p className="text-xs text-gray-400">
             OLTAO is a registered trademark of Nine Oasis Impex Pvt. Ltd.,
             registered in 2019. All rights reserved.

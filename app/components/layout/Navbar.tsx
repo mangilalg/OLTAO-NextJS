@@ -27,7 +27,6 @@ export default function Navbar() {
     >
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-around gap-3 h-16 lg:h-20">
-          {/* Logo */}
           <Link href="/" className="flex items-center gap-2 shrink-0 w-40 h-40">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Image
@@ -40,7 +39,6 @@ export default function Navbar() {
             </motion.div>
           </Link>
 
-          {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-5">
             {navLinks.map((link, i) => (
               <motion.div
@@ -62,9 +60,7 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Icons */}
           <div className="flex items-center gap-3 sm:gap-4">
-            {/* Search */}
             <motion.button
               whileHover={{ scale: 1.1, backgroundColor: "#f5f5f5" }}
               whileTap={{ scale: 0.9 }}
@@ -85,7 +81,7 @@ export default function Navbar() {
                 <path d="m21 21-4.35-4.35" />
               </svg>
             </motion.button>
-            {/* User */}
+
             <motion.button
               whileHover={{ scale: 1.1, backgroundColor: "#f5f5f5" }}
               whileTap={{ scale: 0.9 }}
@@ -106,7 +102,7 @@ export default function Navbar() {
                 <circle cx="12" cy="7" r="4" />
               </svg>
             </motion.button>
-            {/* Cart */}
+
             <motion.button
               whileHover={{ scale: 1.1, backgroundColor: "#f5f5f5" }}
               whileTap={{ scale: 0.9 }}
@@ -129,7 +125,6 @@ export default function Navbar() {
               </svg>
             </motion.button>
 
-            {/* Mobile Menu */}
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -170,7 +165,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Dropdown */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div

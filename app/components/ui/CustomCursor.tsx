@@ -13,8 +13,6 @@ export default function CustomCursor() {
     };
 
     window.addEventListener("mousemove", updatePosition);
-    // Fix: Use relatedTarget to check if we really left the window
-    // But for simply tracking if we are in the window, mouseleave/mouseenter on window works
 
     const handleMouseLeave = () => setIsHovering(false);
     const handleMouseEnter = () => setIsHovering(true);

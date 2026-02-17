@@ -46,10 +46,8 @@ export default function ProductDetail() {
     <section className="bg-[#f5f0eb] py-8 lg:py-8">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 lg:items-center">
-          {/* Left: Image Gallery */}
           <div className="flex flex-col gap-4">
-            {/* Main Image */}
-            <div className="bg-white rounded-3xl overflow-hidden flex items-center justify-center p-8 lg:p-12 relative group shadow-sm aspect-[5/4] w-full">
+            <div className="bg-white rounded-3xl overflow-hidden flex items-center justify-center p-8 lg:p-12 relative group shadow-sm aspect-5/4 w-full">
               <Image
                 src={productImages[selectedImage]}
                 alt="Champ Bladeless Smart Wall Fan"
@@ -60,7 +58,6 @@ export default function ProductDetail() {
               />
             </div>
 
-            {/* Thumbnails */}
             <div className="relative group/thumbs">
               <div className="flex w-full gap-3 items-center overflow-x-auto hide-scrollbar px-12 py-2">
                 <button
@@ -124,12 +121,10 @@ export default function ProductDetail() {
               <span className="text-[#1a1a1a] font-medium">Fan</span>
             </div>
 
-            {/* Title */}
             <h1 className="text-3xl lg:text-4xl text-[#1a1a1a] font-normal mb-3 leading-tight font-serif">
               Champ Bladeless Smart Wall Fan
             </h1>
 
-            {/* Rating */}
             <div className="flex items-center gap-2 mb-3">
               <div className="flex items-center">
                 {[1, 2, 3, 4, 5].map((star) => (
@@ -149,7 +144,6 @@ export default function ProductDetail() {
               <span className="text-sm text-[#999]">(1900)</span>
             </div>
 
-            {/* Price */}
             <div className="flex items-baseline gap-3 mb-4">
               <span className="text-4xl font-bold text-[#1a1a1a]">
                 Rs. 11,699.10
@@ -197,7 +191,6 @@ export default function ProductDetail() {
               </p>
             </div>
 
-            {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 mb-6">
               <button className="cursor-pointer flex-1 py-3.5 px-8 bg-brand border border-brand text-white text-sm font-semibold rounded-[15px] hover:bg-white hover:text-brand  hover:border-brand transition-colors duration-200 shadow-md">
                 Buy Now
@@ -207,7 +200,6 @@ export default function ProductDetail() {
               </button>
             </div>
 
-            {/* Meta Links */}
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-4 border-t border-[#e5e5e5]">
               <div className="flex flex-col gap-2">
                 <button className="cursor-pointer flex items-center gap-2 text-sm text-[#1a1a1a] hover:text-brand transition-colors">

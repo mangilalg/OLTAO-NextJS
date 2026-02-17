@@ -72,7 +72,6 @@ function WhyChooseUs() {
     <section>
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 ">
-          {/* Why Choose Us */}
           <div className="bg-white p-4 h-[500px] flex flex-col justify-around overflow-scroll [&::-webkit-scrollbar]:hidden [scrollbar-width:none] [-ms-overflow-style:none]">
             <h2
               className="text-xl lg:text-2xl text-text font-normal mb-8"
@@ -112,7 +111,6 @@ function WhyChooseUs() {
               ))}
             </div>
 
-            {/* Need Help */}
             <div className="mt-3 p-1 pb-2 bg-white  text-center">
               <p className="text-sm font-semibold text-text mb-2">
                 NEED HELP ?
@@ -161,7 +159,6 @@ function WhyChooseUs() {
             </div>
           </div>
 
-          {/* FAQ */}
           <div className="bg-white p-4 h-[500px] overflow-scroll [&::-webkit-scrollbar]:hidden [scrollbar-width:none] [-ms-overflow-style:none]">
             <h2
               className="text-xl lg:text-2xl text-text font-normal mb-8"
